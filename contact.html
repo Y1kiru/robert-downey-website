@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти | Роберт Дауні-молодший</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Роберт Дауні-молодший</h1>
+
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="biography.html">Біографія</a>
+            <a href="films.html">Фільми</a>
+            <a href="contact.html">Контакти</a>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+
+        <section class="contact-intro">
+            <h1>Контакти</h1>
+            <p>
+                Ласкаво просимо! Створи обліковий запис,
+                увійди до нього або залиш повідомлення.
+            </p>
+        </section>
+
+        <div class="contact-container">
+
+            <section class="contact-card">
+                <h2>Реєстрація</h2>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Дані облікового запису</legend>
+
+                        <label for="reg-name">Ім'я користувача</label>
+                        <input type="text" id="reg-name" name="reg-name" placeholder="Введи своє ім'я" required>
+
+                        <label for="reg-email">Електронна пошта</label>
+                        <input type="email" id="reg-email" name="reg-email" placeholder="example@gmail.com" required>
+
+                        <label for="reg-password">Пароль</label>
+                        <input type="password" id="reg-password" name="reg-password" minlength="8"
+                            placeholder="Мінімум 8 символів" required>
+
+                        <label for="reg-confirm">Підтвердження пароля</label>
+                        <input type="password" id="reg-confirm" name="reg-confirm" minlength="8"
+                            placeholder="Повтори пароль" required>
+
+                        <button type="submit">Зареєструватися</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="contact-card">
+                <h2>Вхід</h2>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Авторизація</legend>
+
+                        <label for="login-email">Електронна пошта</label>
+                        <input type="email" id="login-email" name="login-email" placeholder="example@gmail.com"
+                            required>
+
+                        <label for="login-password">Пароль</label>
+                        <input type="password" id="login-password" name="login-password" placeholder="Введи пароль"
+                            required>
+
+                        <button type="submit">Увійти</button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="contact-card contact-feedback">
+                <h2>Зворотний зв'язок</h2>
+
+                <p>
+                    Маєш пропозиції або зауваження щодо сайту?
+                    Напиши нам!
+                </p>
+
+                <form action="#" method="post">
+                    <fieldset>
+                        <legend>Повідомлення адміністрації</legend>
+
+                        <label for="feedback-name">Твоє ім'я</label>
+                        <input type="text" id="feedback-name" name="feedback-name" placeholder="Введи своє ім'я"
+                            required>
+
+                        <label for="feedback-email">Електронна пошта</label>
+                        <input type="email" id="feedback-email" name="feedback-email" placeholder="example@gmail.com"
+                            required>
+
+                        <label for="feedback-subject">Тема повідомлення</label>
+                        <input type="text" id="feedback-subject" name="feedback-subject" placeholder="Тема повідомлення"
+                            required>
+
+                        <label for="feedback-message">Повідомлення</label>
+                        <textarea id="feedback-message" name="feedback-message" rows="5"
+                            placeholder="Напиши своє повідомлення..." required></textarea>
+
+                        <button type="submit">Надіслати</button>
+                    </fieldset>
+                </form>
+            </section>
+
+        </div>
+
+        <section class="contact-socials">
+            <h2>Ми в соціальних мережах</h2>
+            <p>Дізнавайся більше про Роберта Дауні-молодшого:</p>
+
+            <a href="https://www.instagram.com/robertdowneyjr/" target="_blank" rel="noopener noreferrer">
+                Instagram
+            </a>
+
+            <a href="https://www.imdb.com/name/nm0000375/" target="_blank" rel="noopener noreferrer">
+                IMDb
+            </a>
+        </section>
+
+    </main>
+    
+    <a href="#top" class="scroll-top-btn" title="Нагору">↑</a>
+
+    <footer>
+        <p>Навчальний проєкт про Роберта Дауні-молодшого</p>
+    </footer>
+
+</body>
+
+</html>

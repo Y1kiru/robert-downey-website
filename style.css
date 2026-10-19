@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #7c0c1d;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 4px solid #f04d3b;
+}
+
+header h1 {
+    color: rgb(173, 150, 20);
+    font-size: 40px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+header h2 {
+    color: rgb(213, 196, 88);
+    margin: 15px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #222222;
+    text-align: center;
+    padding: 15px;
+    border-bottom: 4px solid #f04d3b;
+}
+
+nav a {
+    color: #c0b969;
+    font-size: 25px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+section {
+    background-color: #262626;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 27px;
+    color: #f4f4f4;
+    margin-bottom: 15px;
+}
+
+section p {
+    color: #f4f4f4;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #3e3e3e;
+    text-align: center;
+    padding: 20px;
+    color: #cdc8c8;
+    margin-top: 40px;
+}
+
+figure.actor-photo {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    margin: 20px auto;
+    border: 3px solid #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+figure.actor-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+}
+
+.more-button {
+    display: inline-block;
+    background-color: #c0392b;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    transition: background-color 0.3s;
+}
+
+.more-button:hover {
+    background-color: #922b21;
+}
+
+.biography-table {
+    width: 100%;
+    margin-top: 12px;
+    border-collapse: collapse;
+}
+
+.biography-table th,
+.biography-table td {
+    border: 3px solid #555555;
+    text-align: left;
+    padding: 15px;
+}
+
+.biography-table th {
+    background-color: #a83226;
+    color: white;
+}
+
+.biography-table tr:nth-child(even) {
+    background-color: #303030;
+}
+
+section li {
+    font-size: 16px;
+}
+
+section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 25px;
+}
+
+/* Фільми */
+.films-main {
+    max-width: 1300px;
+}
+
+.films-intro {
+    margin-bottom: 30px;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.film-card {
+    min-width: 0;
+    overflow: hidden;
+    background-color: #262626;
+    border: 1px solid #444;
+    border-top: 4px solid #c0392b;
+    border-radius: 12px;
+    padding: 18px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.film-card:hover {
+    border-top-color: #d4af37;
+}
+
+.film-card h2 {
+    color: #d4af37;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.film-year {
+    color: #c0b969;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.split-poster,
+.whole-poster {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: 400px;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.split-poster img,
+.whole-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.poster-half {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+
+.poster-left {
+    left: 0;
+}
+
+.poster-right {
+    right: 0;
+}
+
+.poster-left:hover {
+    background-color: rgba(192, 57, 43, 0.3);
+}
+
+.poster-right:hover {
+    background-color: rgba(212, 175, 55, 0.3);
+}
+
+.whole-poster img {
+    transition: transform 0.5s, border-color 0.3s;
+}
+
+.whole-poster:hover img {
+    border-color: #d4af37;
+}
+
+.whole-poster:focus-visible,
+.poster-half:focus-visible {
+    outline: 3px solid #d4af37;
+    outline-offset: 3px;
+}
+
+.film-card>p:not(.film-year, .poster-hint) {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.poster-hint {
+    color: #c0b969;
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 15px;
+}
+
+.films-back {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Контакти та Форми */
+.contact-main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    border-top: 4px solid #f04d3b;
+}
+
+.contact-intro h1 {
+    color: rgb(173, 150, 20);
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    align-items: start;
+}
+
+.contact-card {
+    background-color: #262626;
+    border: 1px solid #444;
+    border-top: 4px solid #c0392b;
+    border-radius: 12px;
+    padding: 25px;
+    transition: border-color 0.3s;
+}
+
+.contact-card:hover {
+    border-top-color: #d4af37;
+}
+
+.contact-card h2 {
+    color: rgb(213, 196, 88);
+    font-size: 27px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стилізація Fieldset та Legend */
+fieldset {
+    border: 1px solid #555;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    color: #d4af37;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-card label {
+    color: #f4f4f4;
+    font-size: 15px;
+    display: block;
+    margin-top: 8px;
+}
+
+.contact-card input,
+.contact-card textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    color: #f4f4f4;
+    border: 2px solid #555;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Динамічні стани полів та валідація */
+.contact-card input:focus,
+.contact-card textarea:focus {
+    outline: none;
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
+}
+
+.contact-card input:focus:valid,
+.contact-card textarea:focus:valid {
+    border-color: #2ecc71;
+}
+
+.contact-card input:focus:invalid,
+.contact-card textarea:focus:invalid {
+    border-color: #e74c3c;
+}
+
+.contact-card input::placeholder,
+.contact-card textarea::placeholder {
+    color: #aaa;
+}
+
+.contact-card textarea {
+    resize: vertical;
+}
+
+.contact-card button {
+    background-color: #c0392b;
+    color: white;
+    padding: 12px;
+    margin-top: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-card button:hover {
+    background-color: #922b21;
+}
+
+.contact-feedback {
+    grid-column: 1 / -1;
+}
+
+.contact-socials {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 4px solid #f04d3b;
+}
+
+.contact-socials h2 {
+    color: rgb(213, 196, 88);
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.contact-socials a {
+    display: inline-block;
+    background-color: #7c0c1d;
+    color: #c0b969;
+    text-decoration: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #f04d3b;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-socials a:hover {
+    background-color: #c0392b;
+    color: white;
+}
+
+/* Фіксована кнопка «Вгору» (position: fixed) */
+.scroll-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #c0392b;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-top-btn:hover {
+    background-color: #d4af37;
+    color: #111;
+    transform: scale(1.1);
+}
