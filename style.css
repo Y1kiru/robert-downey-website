@@ -464,3 +464,175 @@ legend {
     color: #111;
     transform: scale(1.1);
 }
+/* Адаптивність сайту */
+
+/* Flexbox для навігаційного меню */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    margin: 0;
+}
+
+/* Адаптивні зображення */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Планшети та невеликі ноутбуки */
+@media (max-width: 1024px) {
+
+    main {
+        width: 95%;
+    }
+
+    .films-main,
+    .contact-main {
+        width: 95%;
+    }
+
+    .films-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+}
+
+/* Планшети та великі смартфони */
+@media (max-width: 768px) {
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 12px;
+        padding: 12px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    main,
+    .contact-main,
+    .films-main {
+        width: 100%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+
+    .films-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    section p {
+        font-size: 16px;
+    }
+}
+
+/* Мобільні телефони */
+@media (max-width: 480px) {
+
+    header {
+        padding: 25px 10px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    header h2 {
+        font-size: 17px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    main,
+    .contact-main,
+    .films-main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 22px;
+    }
+
+    section p {
+        font-size: 15px;
+    }
+
+    .films-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-feedback {
+        grid-column: auto;
+    }
+
+    .film-card {
+        padding: 15px;
+    }
+
+    .split-poster,
+    .whole-poster {
+        height: 350px;
+    }
+
+    .contact-card {
+        padding: 15px;
+    }
+
+    .biography-table th,
+    .biography-table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .scroll-top-btn {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 14px;
+    }
+}
